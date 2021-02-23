@@ -172,3 +172,33 @@ Det ska finnas en `Admin Area`-view med ett CRUD-gränssnitt för alla produkter
 ### Väl godkänt
 * {...godkänt}
 * Admin-view för CRUD av produkter
+
+
+Agenda för vecka 8.
+Tisdag 23/2 2021
+Möte med gruppen angående vilket projekt alla vill jobba med
+Klona repository
+Skapa trelloboard board
+Utse scrummaster(Rojin)
+
+Onsdag 24/2 2021
+Möte med gruppen
+Tilldela arbetsuppgifter
+
+Torsdag 25/2
+Jobba med projektet
+
+Fredag 26/2
+Fortsätta jobba med projektet
+
+Agenda för vecka 9.
+Måndag 1/3
+
+
+Tisdag 2/3
+
+
+Onsdag 3/3
+
+
+Torsdag 4/3
