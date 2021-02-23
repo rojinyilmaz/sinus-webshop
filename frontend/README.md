@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+link till figma
+https://www.figma.com/file/OvtrkkPjAZf7gx3O9JMCTL/Untitled?node-id=0%3A1
