@@ -174,16 +174,23 @@ Det ska finnas en `Admin Area`-view med ett CRUD-gränssnitt för alla produkter
 * Admin-view för CRUD av produkter
 
 
-Agenda för vecka 8.
+### Agenda för vecka 8
 Tisdag 23/2 2021
+
 Möte med gruppen angående vilket projekt alla vill jobba med
 Klona repository
 Skapa trelloboard board
 Utse scrummaster(Rojin)
 
 Onsdag 24/2 2021
-Möte med gruppen
+
+Uppfölningsmöte
 Tilldela arbetsuppgifter
+Jobba vidare med produktlistan(Tim)
+Jobbar vidare homepage och nav(Samme)
+Jobbar vidare med Checkout och varucart(Rojin)
+Jobbar med inloggningssidan(Shamil)
+Jobbar med registreringssidan(Midori)
 
 Torsdag 25/2
 Jobba med projektet
@@ -191,7 +198,7 @@ Jobba med projektet
 Fredag 26/2
 Fortsätta jobba med projektet
 
-Agenda för vecka 9.
+### Agenda för vecka 9
 Måndag 1/3
 
 
