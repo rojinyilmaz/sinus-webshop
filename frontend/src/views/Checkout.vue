@@ -1,7 +1,10 @@
 <template>
 <div class="wrapper">
   <main class="checkout">
+    <img class="logo" src="../assets/Sinuscheckout.svg"/>
+    
 <hr class="line1"/>
+
       <h3>My cart</h3>
   </main>
 </div>
@@ -24,7 +27,6 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-position: right, left;
 }
 
 .checkout{
@@ -37,10 +39,19 @@ export default {
         border-radius: 3px;
 }
 
+.logo{
+  
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
 .line1{
     border: 2px solid black;
     width: 90%;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 
