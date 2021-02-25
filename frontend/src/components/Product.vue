@@ -1,6 +1,13 @@
 <template>
-<section>
-    <div v-for ="c in test" :key=c.id class="productSection">
+<section class="productSection">
+    <div v-for ="c in test" :key=c.id>
+        <div class="pwrapper">
+            <h3>{{c.name}}</h3>
+            <p>{{c.desc}}</p>
+            <h4>{{c.price}} €</h4>
+        </div>
+    </div>
+    <div v-for ="c in testc" :key=c.id>
         <div class="pwrapper">
             <h3>{{c.name}}</h3>
             <p>{{c.desc}}</p>
@@ -17,6 +24,10 @@ export default {
 computed:{
     test()
     {
+        return this.$store.getters.skateboards;
+    },
+    testc()
+    {
         return this.$store.getters.clothes;
     }
 }
@@ -24,12 +35,17 @@ computed:{
 }
 
 </script>
-<style>
+<style scoped>
 
 .productSection{
-    display: grid;
-    justify-content: center;
-    align-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.pwrapper{
+    text-align: center;
 }
 
 </style>
