@@ -11,8 +11,12 @@
 </template>
 
 <script>
-export default {
 
+
+export default {
+components:{
+
+}
 }
 </script>
 
