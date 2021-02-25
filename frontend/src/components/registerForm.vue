@@ -19,11 +19,11 @@
                   <label class="label-for-name" for="name">Name</label>
                   <input class="name" type="text" v-model="user.name">
                   <label class="label-for-street" for="street">street</label>
-                  <input class="street" type="text" v-model="user.adress.street">
+                  <input class="street" type="text" v-model="user.address.street">
                   <label class="label-for-zip" for="zip">zip</label>
-                  <input class="zip" type="text" v-model="user.adress.zip" maxlength="5">
+                  <input class="zip" type="text" v-model="user.address.zip" maxlength="5">
                   <label class="label-for-city" for="city">city</label>
-                  <input class="city" type="text" v-model="user.adress.city" > 
+                  <input class="city" type="text" v-model="user.address.city" > 
               </div>
               <div class="button">
                   <input type="submit" value="Sign up!">
@@ -42,7 +42,7 @@ export default {
                 email: '',
                 password: '',
                 name: '',
-                adress:{
+                address:{
                     street: '',
                     zip: '',
                     city: ''
@@ -53,10 +53,11 @@ export default {
     },
     methods: {
         onSubmit() {
-            //OK/true)だったらヘイ
+            
             if(this.validation()){
                
-                // this.$store.dispatch('registerUser', this.user)
+                this.$store.dispatch('registerUser', this.user)
+            
             }
         },
 
@@ -82,16 +83,16 @@ export default {
             } else if(this.user.name.match(/^[0-9]+$/)){
                 this.errors.push('Your name must consist of letters')
                 return 
-            } else if(this.user.adress.street === '') {
+            } else if(this.user.address.street === '') {
                 this.errors.push('Enter your address')
                 return 
-            } else if(this.user.adress.zip === ''){
+            } else if(this.user.address.zip === ''){
                 this.errors.push('Enter your zip code')
                 return
-            } else if(!zipValidation.test(this.user.adress.zip)){
+            } else if(!zipValidation.test(this.user.address.zip)){
                  this.errors.push('Make sure the zip code is correct')
                  return
-            } else if(this.user.adress.city === '') {
+            } else if(this.user.address.city === '') {
                 this.errors.push('Enter your city')
                 return 
             }
