@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { REGISTER_URL, post } from '../api/api.js'
+import { REGISTER_URL, register } from '../api/api.js'
 
 Vue.use(Vuex)
 
@@ -68,8 +68,8 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
-    async registerUser(context, payload) {
-      const response = await post(REGISTER_URL, payload)
+    async registerUser(context, user) {
+      const response = await register(REGISTER_URL, user)
       console.log(response)
       console.log(context)
     }
