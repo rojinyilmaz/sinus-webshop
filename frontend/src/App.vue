@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/checkout">Checkout</router-link> | <!-- la checkout i nav tillfälligt -->
-      <router-link to="/productpage">Products</router-link>
+      <router-link to="/productpage">Products</router-link> |
+      <router-link to="/register">Register</router-link> 
     </div>
     <router-view/>
   </div>
