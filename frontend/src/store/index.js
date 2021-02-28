@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { REGISTER_URL, register } from '../api/api.js'
+import { REGISTER_URL, post } from '../api/api.js'
 
 Vue.use(Vuex)
 
@@ -62,8 +62,20 @@ export default new Vuex.Store({
       }
     ],
 
-    Order:[]
-
+    Order:[],
+    auth: {
+      loggedin: false,
+      token: null,
+      user: {
+        email: '',
+        name: '',
+        address: {
+          street:'',
+          zip: '',
+          city: ''
+        }
+      }
+    }
   },
   getters: {
     clothes:state=>{
@@ -74,12 +86,18 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    setAuth(state,payload) {
+      let user = JSON.parse(payload.config.data)
+      state.auth.user= user
+      state.auth.loggedin = true
+      console.log(state.auth)
+    }
   },
   actions: {
-    async registerUser(context, user) {
-      const response = await register(REGISTER_URL, user)
+    async registerUser({commit}, payload) {
+      const response = await post(REGISTER_URL, payload)
       console.log(response)
-      console.log(context)
+      commit('setAuth', response)
     }
   },
   modules: {

@@ -3,9 +3,9 @@ const { default: axios } = require("axios")
 const BASE_URL = 'http://localhost:5000/api/';
 const REGISTER_URL = `${BASE_URL}register`
 
-const register = async (url, user) => {
+const post = async (url, obj) => {
     try {
-        const response = await axios.post(url, user)
+        const response = await axios.post(url, obj)
         return response
         
     } catch (error) {
@@ -14,4 +14,4 @@ const register = async (url, user) => {
     }}
 
 
-export { REGISTER_URL, register } 
+export { REGISTER_URL, post } 
