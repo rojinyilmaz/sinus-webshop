@@ -193,6 +193,7 @@ Jobbar med inloggningssidan(Shamil)
 Jobbar med registreringssidan(Midori)
 
 Torsdag 25/2
+Uppföljningsmöte kl13
 Jobba med projektet
 
 Fredag 26/2
