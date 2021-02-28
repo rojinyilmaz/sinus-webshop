@@ -2,16 +2,18 @@
 <section class="productSection">
     <div v-for ="c in test" :key=c.id>
         <div class="pwrapper">
-            <h3>{{c.name}}</h3>
+            <img src='@/assets/skateboard-greta.png'>
+            <h4>{{c.name}}</h4>
             <p>{{c.desc}}</p>
-            <h4>{{c.price}} €</h4>
+            <h5>{{c.price}} €</h5>
         </div>
     </div>
     <div v-for ="c in testc" :key=c.id>
         <div class="pwrapper">
-            <h3>{{c.name}}</h3>
+            <img src='@/assets/hoodie-fire.png'>
+            <h4>{{c.name}}</h4>
             <p>{{c.desc}}</p>
-            <h4>{{c.price}} €</h4>
+            <h5>{{c.price}} €</h5>
         </div>
     </div>
 </section>
@@ -35,17 +37,29 @@ computed:{
 }
 
 </script>
-<style scoped>
+<style>
+
+
 
 .productSection{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-  justify-content: space-evenly;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
-.pwrapper{
-    text-align: center;
+.pwrapper, h4, h5, p{
+    color:white;
 }
+
+img{
+    width:143px;
+    height:155px;
+    object-fit: contain;
+    background-color: white;
+}
+
 
 </style>

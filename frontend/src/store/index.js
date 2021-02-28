@@ -14,6 +14,7 @@ export default new Vuex.Store({
         desc:"A Skateboard that makes you feel like a Hero",
         amount:1,
         //image: require('~@/assets/skate-hero1.jpg'),
+
       },
       {
         id:2,
@@ -27,6 +28,13 @@ export default new Vuex.Store({
         name:"Wavy skateboard",
         price:109,
         desc:"Ride like a wave",
+        amount:1
+      },
+      {
+        id:4,
+        name:"Cool skateboard",
+        price:109,
+        desc:"Feel like a real pro skater",
         amount:1
       }
     ],
