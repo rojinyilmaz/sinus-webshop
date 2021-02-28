@@ -3,7 +3,7 @@
       <main class="register-main">
           <h1>Register</h1>
       <p class="error" v-if="errors.length">
-          <b>Correct the following errors:</b>
+          <b>Correct the following error:</b>
               <ul>
                   <li v-for="error in errors" :key="error.index">
                   {{ error }}
@@ -23,7 +23,7 @@
                   <label class="label-for-zip" for="zip">Zip</label>
                   <input class="zip" type="text" v-model="user.address.zip" maxlength="5">
                   <label class="label-for-city" for="city">City</label>
-                  <input class="city" type="text" v-model="user.address.city" > 
+                  <input class="city" type="text" v-model="user.address.city"> 
               </div>
               <div class="button">
                   <input type="submit" value="Sign up!">
@@ -53,14 +53,12 @@ export default {
     },
     methods: {
         onSubmit() {
-            
             if(this.validation()){
-               
                 this.$store.dispatch('registerUser', this.user)
-            
+                // this.$router.push('/')
             }
         },
-
+        
         validation() {
             const emailValidation = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
             const zipValidation = /^\d{3}\d{2}$/
@@ -99,11 +97,8 @@ export default {
             else {
                 return true
             }
-           
         }
     },
-    
-
 }
 </script>
 
@@ -233,6 +228,10 @@ label {
 .error {
     color: rgb(228, 15, 15);
 }
+
+/* .alert-color{
+    border-color: rgb(228, 15, 15);
+} */
 
 ul {
     list-style: none;
