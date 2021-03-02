@@ -2,8 +2,7 @@
 <section class="productSection">
     <div v-for ="c in result" :key=c._id>
         <div class="pwrapper">
-         
-        <img :src="'assets/' + c.imgFile">
+        <img :src="require(`../assets/${c.imgFile}`)"/>
             <h4>{{c.title}}</h4>
             <p>{{c.shortDesc}}</p>
             <h5>{{c.price}} €</h5>
