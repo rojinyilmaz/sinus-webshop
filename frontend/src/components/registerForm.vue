@@ -54,48 +54,48 @@ export default {
     methods: {
         onSubmit() {
             if(this.validation()){
-                this.$store.dispatch('registerUser', this.user)
-                // this.$router.push('/')
+                this.$store.dispatch('registerUser', this.user);
+                this.$router.push('/myaccount');
             }
         },
         
         validation() {
             const emailValidation = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
-            const zipValidation = /^\d{3}\d{2}$/
+            const zipValidation = /^\d{3}\d{2}$/;
             this.errors.splice(0,1);
             if(this.user.email === ''){
                 this.errors.push('Enter your e-mail address')
-                return
+                return;
             } else if(!emailValidation.test(this.user.email)){
                 this.errors.push('Make sure your e-mail address is correct')
-                return 
+                return ;
             } else if(this.user.password === '') {
                 this.errors.push('Enter your password')
-                return
+                return;
             } else if(this.user.password.length < 8){
                 this.errors.push('Password length should be 8 to 15')
-                return 
+                return;
             } else if(this.user.name === ''){
                 this.errors.push('Enter your name')
-                return
+                return;
             } else if(this.user.name.match(/^[0-9]+$/)){
                 this.errors.push('Your name must consist of letters')
-                return 
+                return;
             } else if(this.user.address.street === '') {
                 this.errors.push('Enter your address')
-                return 
+                return; 
             } else if(this.user.address.zip === ''){
                 this.errors.push('Enter your zip code')
-                return
+                return;
             } else if(!zipValidation.test(this.user.address.zip)){
                  this.errors.push('Make sure the zip code is correct')
-                 return
+                 return;
             } else if(this.user.address.city === '') {
                 this.errors.push('Enter your city')
-                return 
+                return; 
             }
             else {
-                return true
+                return true;
             }
         }
     },
