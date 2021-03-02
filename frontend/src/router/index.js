@@ -22,11 +22,18 @@ const routes = [
     name: 'ProductPage',
     component: ProductPage
   },
-  {path: "/register",
-   name: "Register",
-   component: () =>
-      import("../views/register.vue")
-  }
+  {
+    path: "/register",
+    name: "Register",
+    component: () =>
+    import("../views/register.vue")
+  },
+  {
+    path: "/myaccount",
+    name: "MyAccount",
+    component: () =>
+    import("../views/MyAccount.vue")
+ }
 ]
 
 const router = new VueRouter({
