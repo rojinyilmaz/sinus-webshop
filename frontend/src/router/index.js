@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Checkout from '../views/Checkout.vue'
 import ProductPage from '../views/ProductPage.vue'
+import SingleProduct from '../views/SingleProduct.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
    name: "Register",
    component: () =>
       import("../views/register.vue")
+  },
+  {path: '/SingleProduct/:id',
+   name: 'SingleProduct',
+   component: SingleProduct,
+   props: true
   }
 ]
 

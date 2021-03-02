@@ -3,13 +3,13 @@
     <div v-for ="c in result" :key=c._id>
         <div class="pwrapper">
         <img :src="require(`../assets/${c.imgFile}`)"/>
-            <h4>{{c.title}}</h4>
+            <router-link :to="{name: 'SingleProduct', params: {id: 1}}"> {{c.title}} </router-link> 
             <p>{{c.shortDesc}}</p>
             <h5>{{c.price}} €</h5>
         </div>
     </div>
 </section>
-  
+
 </template>
 
 <script>

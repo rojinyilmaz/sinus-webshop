@@ -12,9 +12,7 @@ export default new Vuex.Store({
         name:"Skateboard Hero",
         price:99,
         desc:"A Skateboard that makes you feel like a Hero",
-        amount:1,
-        //image: require('~@/assets/skate-hero1.jpg'),
-
+        amount:1
       },
       {
         id:2,
