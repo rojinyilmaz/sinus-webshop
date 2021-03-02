@@ -5,7 +5,7 @@
     
 <hr class="line1"/>
 
-      <h3>Delivery adress</h3>
+      <h3>My cart</h3>
   </main>
 </div>
 </template>

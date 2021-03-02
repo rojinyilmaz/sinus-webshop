@@ -1,18 +1,11 @@
 <template>
 <section class="productSection">
-    <div v-for ="c in test" :key=c.id>
+    <div v-for ="c in result" :key=c._id>
         <div class="pwrapper">
-            <img src='@/assets/skateboard-greta.png'>
-            <h4>{{c.name}}</h4>
-            <p>{{c.desc}}</p>
-            <h5>{{c.price}} €</h5>
-        </div>
-    </div>
-    <div v-for ="c in testc" :key=c.id>
-        <div class="pwrapper">
-            <img src='@/assets/hoodie-fire.png'>
-            <h4>{{c.name}}</h4>
-            <p>{{c.desc}}</p>
+         
+        <img :src="'assets/' + c.imgFile">
+            <h4>{{c.title}}</h4>
+            <p>{{c.shortDesc}}</p>
             <h5>{{c.price}} €</h5>
         </div>
     </div>
@@ -22,23 +15,25 @@
 
 <script>
 export default {
-
-computed:{
-    test()
-    {
-        return this.$store.getters.skateboards;
+    data: function() {
+        return { result: null}
     },
-    testc()
-    {
-        return this.$store.getters.clothes;
-    }
+   created: function () {
+      fetch("http://localhost:5000/api/products")
+        .then(r => r.json())
+        .then(json => {
+          this.result=json;
+          console.log(json)
+        });
+    },
+computed:{
+  
 }
 
 }
 
 </script>
 <style>
-
 
 
 .productSection{
@@ -60,6 +55,5 @@ img{
     object-fit: contain;
     background-color: white;
 }
-
 
 </style>
