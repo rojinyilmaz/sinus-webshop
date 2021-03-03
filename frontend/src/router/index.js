@@ -19,7 +19,7 @@ const routes = [
     component: Checkout
   },
   {
-    path: '/ProductPage',
+    path: '/productpage',
     name: 'ProductPage',
     component: ProductPage
   },

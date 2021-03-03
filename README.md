@@ -201,12 +201,12 @@ Fortsätta jobba med projektet
 
 ### Agenda för vecka 9
 Måndag 1/3
-
+Alla fortsätter att jobba med sina uppgifter
 
 Tisdag 2/3
-
+Uppföljningsmöte samt samtal med Niklas
 
 Onsdag 3/3
-
+Alla fortsätter att jobba med sina projekt
 
 Torsdag 4/3
