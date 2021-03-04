@@ -24,7 +24,7 @@ computed:{
 
 </script>
 
-<style>
+<style scoped>
 
 .pwrapper, .links, p{
     color:black;
