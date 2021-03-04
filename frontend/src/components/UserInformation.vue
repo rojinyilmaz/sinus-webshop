@@ -1,5 +1,5 @@
 <template>
-  <div main>
+  <div class="main">
     <h1>My account</h1>
     <p>Name: {{ me.name }}</p>
     <p>Email: {{ me.email }}</p>
@@ -65,13 +65,17 @@ export default {
 }
 
 h1 {
-  color: white;
+  color: black;
 }
 p {
-  color: white;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 button {
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 12rem;
   height: 3rem;
   border-radius: 2rem;
