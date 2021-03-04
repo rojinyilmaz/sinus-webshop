@@ -38,7 +38,7 @@
             <input class="city" type="text" v-model="user.address.city"> 
         </div>
         <div class="button">
-            <input type="submit" value="Sign up!">
+            <input type="submit" value="SIGN UP">
         </div>
     </form>
       </main>
