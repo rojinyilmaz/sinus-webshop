@@ -26,9 +26,8 @@ export default {
 </script>
 
 <style>
-
-body{
-    background-color: black;
+.productwrapper{
+    padding-top: 4em;
 }
 
 .productSection{
@@ -39,5 +38,7 @@ body{
     padding-left: 2em;
     padding-right: 2em;
 }
+
+
 
 </style>

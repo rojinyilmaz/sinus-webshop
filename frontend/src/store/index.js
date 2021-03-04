@@ -71,7 +71,7 @@ export default new Vuex.Store({
     logOut({commit}) {
       commit('logOut');
       commit('resetFailLogin')
-    }
+    },
   },
   modules: {
   }

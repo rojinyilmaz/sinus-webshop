@@ -1,9 +1,9 @@
 <template>
         <div class="pwrapper">
-        <img :src="require(`../assets/${product.imgFile}`)"/>
-            <router-link :to="{name: 'SingleProduct', params: {id: 1}}"> {{product.title}} </router-link> 
-            <p>{{product.shortDesc}}</p>
-            <h5>{{product.price}} €</h5>
+        <img :src="require(`../assets/${product.imgFile}`)"/><br>
+            <router-link :to="{name: 'SingleProduct', params: {id: 1}}" class="links"> {{product.title}} </router-link> 
+            <p id="desc">{{product.shortDesc}}</p>
+            <p id="price">{{product.price}} SEK</p>
         </div>
 </template>
 
@@ -26,10 +26,31 @@ computed:{
 
 <style>
 
-
-.pwrapper, h4, h5, p{
-    color:white;
+.pwrapper, .links, p{
+    color:black;
+    padding-bottom: 1em;
 }
+
+.pwrapper{
+    background-color: white;
+    margin: 0.8em;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.links, #price, #desc{
+    display: flex;
+}
+img{
+    margin-bottom: 1em;
+}
+
+#price, #desc{
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    }
 
 img{
     width:143px;
