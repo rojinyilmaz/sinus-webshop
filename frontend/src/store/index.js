@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { REGISTER_URL, post, removeToken } from '../api/api.js'
+import { AUTH_URL, REGISTER_URL, post, removeToken, setToken } from '../api/api.js'
 
 Vue.use(Vuex)
 
@@ -11,7 +11,9 @@ export default new Vuex.Store({
    cart:[],
 
     order:[],
-    loggedIn: false
+    loggedIn: false,
+    user:{},
+    error: false
   },
   getters: {
     clothes:state=>{
@@ -22,15 +24,24 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    logIn(state) {
+    logIn(state, payload) {
       state.loggedIn = true;
+      state.user = payload;
     },
     logOut(state) {
       state.loggedIn = false;
       removeToken();
+      state.user = {};
     },
     setProducts(state, payload){
       state.products = payload
+    }
+    ,
+    failLogin(state) {
+      state.error = true;
+    },
+    resetFailLogin(state) {
+      state.error = false
     }
   },
   actions: {
@@ -42,13 +53,24 @@ export default new Vuex.Store({
         console.log(json)
       })
     },
-    async registerUser(context, payload) {
+    async registerUser({dispatch}, payload) {
       const response = await post(REGISTER_URL, payload);
-      console.log(response);
-      console.log(context);
+      if(response) {
+        await dispatch('authenticateUser', { email: payload.email, password: payload.password })
+      }
+    },
+    async authenticateUser({commit}, payload) {
+      const response = await post(AUTH_URL, payload)
+      if(response) {
+        setToken(response.data.token)
+        commit('logIn', response.data.user)
+      } else {
+       commit('failLogin')
+      }
     },
     logOut({commit}) {
       commit('logOut');
+      commit('resetFailLogin')
     }
   },
   modules: {

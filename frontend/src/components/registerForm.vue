@@ -2,33 +2,45 @@
   <div class="wrapper">
       <main class="register-main">
           <h1>Register</h1>
-      <p class="error" v-if="errors.length">
-          <b>Correct the following error:</b>
-              <ul>
-                  <li v-for="error in errors" :key="error.index">
-                  {{ error }}
-                  </li>
-              </ul>
-          </p>    
+         <p class="error" v-if="errors.length">
+             <b>Correct the following error:</b>
+                 <ul>
+                     <li v-for="error in errors" :key="error.index">
+                     {{ error }}
+                     </li>
+                 </ul>
+            </p>    
      <form @submit.prevent="onSubmit">
-              <div class="input-form">
-                  <label class="label-for-email" for="email">E-mail</label>
-                  <input class="email" type="text" v-model="user.email">
-                  <label class="label-for-password" for="password">Password</label>
-                  <input class="password" type="text" v-model="user.password" maxlength="15">
-                  <label class="label-for-name" for="name">Name</label>
-                  <input class="name" type="text" v-model="user.name">
-                  <label class="label-for-street" for="street">Street</label>
-                  <input class="street" type="text" v-model="user.address.street">
-                  <label class="label-for-zip" for="zip">Zip</label>
-                  <input class="zip" type="text" v-model="user.address.zip" maxlength="5">
-                  <label class="label-for-city" for="city">City</label>
-                  <input class="city" type="text" v-model="user.address.city"> 
-              </div>
-              <div class="button">
-                  <input type="submit" value="Sign up!">
-              </div>
-          </form>
+        <div class="input-form">
+            <label class="label-for-email" for="email">
+                E-mail
+            </label>
+            <input class="email" type="text" v-model="user.email">
+            <label class="label-for-password" for="password">
+                Password
+            </label>
+            <input class="password" type="text" v-model="user.password" maxlength="15">
+            <label class="label-for-name" for="name">
+                Name
+            </label>
+            <input class="name" type="text" v-model="user.name">
+            <label class="label-for-street" for="street">
+                Street
+            </label>
+            <input class="street" type="text" v-model="user.address.street">
+            <label class="label-for-zip" for="zip">
+                Zip
+            </label>
+            <input class="zip" type="text" v-model="user.address.zip" maxlength="5">
+            <label class="label-for-city" for="city">
+                City
+            </label>
+            <input class="city" type="text" v-model="user.address.city"> 
+        </div>
+        <div class="button">
+            <input type="submit" value="Sign up!">
+        </div>
+    </form>
       </main>
       
   </div>

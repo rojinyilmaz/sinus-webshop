@@ -1,12 +1,12 @@
 <template>
   <div>
-      <!-- <div v-if="!loggedIn"><LogIn /></div> -->
-      <!-- <div v-else>  -->
-        <!-- <UserInformation /> -->
-        <!-- </div> -->
-
+     
       <div v-if="loggedIn">
         <UserInformation />
+      </div>
+      <div v-else>
+        <LoginForm />
+        <RegisterHome />
       </div>
      
 
@@ -14,12 +14,14 @@
 </template>
 
 <script>
-// import LogIn from '../components/LogIn.vue'
+import LoginForm from '../components/LoginForm.vue';
+import RegisterHome from '../components/registerHome.vue';
 import UserInformation from '../components/UserInformation.vue'
 export default {
   components: { 
     UserInformation,
-    // LogIn
+    RegisterHome,
+    LoginForm,
      },
   computed: {
       loggedIn() {

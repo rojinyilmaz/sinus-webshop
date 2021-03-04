@@ -11,7 +11,7 @@
     </template>
     <h1>Order History</h1>
     <template v-if="me.orderHistory">
-      {{ me.orderHistory }}
+      {{ orderHistory }}
     </template>
     <template v-else>
       <p>You have no order history</p>
@@ -31,9 +31,17 @@ export default {
   },
   async created() {
     const response = await get(ME_URL);
-    console.log(response);
-    console.log(response.data);
     this.me = response.data;
+  },
+  computed: {
+    orderHistory() {
+      const history = this.me.orderHistory
+      return  history.forEach(order => {
+        Object.keys(order).forEach(key => {
+          return `${key}: ${order[key]}`
+        })
+      })
+    }
   },
   methods: {
     logOut() {

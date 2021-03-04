@@ -23,7 +23,8 @@ const routes = [
     name: 'ProductPage',
     component: ProductPage
   },
-  {path: "/register",
+  {
+   path: "/register",
    name: "Register",
    component: () =>
       import("../views/register.vue")
@@ -32,12 +33,6 @@ const routes = [
    name: 'SingleProduct',
    component: SingleProduct,
    props: true
-  },
-  {
-    path: "/register",
-    name: "Register",
-    component: () =>
-    import("../views/register.vue")
   },
   {
     path: "/myaccount",
