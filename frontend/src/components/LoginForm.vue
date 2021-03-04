@@ -1,18 +1,21 @@
 <template>
-  <div>
-      <p v-if="loginError.error">please make sure your e-mail address and password</p>
-      <h1>Log in</h1>
-      <div v-if="errors.length">
-          <ul>
-            <li v-for="error in errors" :key="error.index">
-                {{ error }}
-            </li>
-          </ul>
-      </div>
+  <div class="wrapper">     
       <form class="log-in" @submit.prevent="onSubmit">
-          <p>Email</p>
+          <h1>LOG IN</h1>
+          <div class="error">
+              <p v-if="loginError.error">please make sure your e-mail address and password</p>
+              <div v-if="errors.length">
+                 <ul>
+                    <li v-for="error in errors" :key="error.index">
+                        {{ error }}
+                    </li>
+                </ul>
+            </div>
+          </div>
+          
+          <label for="e-mail">E-mail</label>
           <input type="text" v-model="email">
-          <p>Password</p>
+          <label for="password">Password</label>
           <input type="text" v-model="password">
           <div  class="button">
               <input type="submit" value="LOG IN">
@@ -73,6 +76,10 @@ export default {
 
 <style scoped>
 
+.wrapper {
+    margin-bottom: 10px;
+}
+
 .log-in {
     background-color: white;
     width: 95%;
@@ -82,6 +89,11 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+label {
+    margin-bottom: 8px;
+    margin-top: 10px;
 }
 
 input{
@@ -116,6 +128,23 @@ input{
     background-color: black;
     color: white;
     border: none;
+}
+
+.button input:active {
+      transform: scale(.9);
+}
+
+.button input:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.error {
+    color: rgb(228, 15, 15);
 }
 
 

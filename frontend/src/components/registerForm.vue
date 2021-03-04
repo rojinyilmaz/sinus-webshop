@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
       <main class="register-main">
-          <h1>Register</h1>
+          <h1>REGISTER USER</h1>
          <p class="error" v-if="errors.length">
              <b>Correct the following error:</b>
                  <ul>
@@ -115,10 +115,6 @@ export default {
 </script>
 
 <style scoped>
-/* 
-.wrapper{
-    background-color: black;
-} */
 
 .register-main {
     background-color: white;
@@ -134,7 +130,6 @@ export default {
 .input-form {
     display: grid;
     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
-    /* grid-template-columns: 20rem 20rem; */
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
 
@@ -236,14 +231,17 @@ label {
     color: white;
     border: none;
 }
+.button input:active {
+      transform: scale(.9);
+}
+
+.button input:focus {
+    outline: none;
+}
 
 .error {
     color: rgb(228, 15, 15);
 }
-
-/* .alert-color{
-    border-color: rgb(228, 15, 15);
-} */
 
 ul {
     list-style: none;

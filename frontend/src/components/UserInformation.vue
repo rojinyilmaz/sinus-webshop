@@ -87,9 +87,16 @@ button {
 }
 
 button:hover {
-   background-color: black;
-    color: white;
-    border: none;
+  background-color: black;
+  color: white;
+  border: none;
+}
 
+button:active {
+      transform: scale(.9);
+}
+
+button:focus {
+    outline: none;
 }
 </style>
