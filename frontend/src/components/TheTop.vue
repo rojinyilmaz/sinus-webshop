@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="logo">
-            <img src="../assets/img/Component 23.vue">
+            <!-- <img src="../assets/img/Component 23.vue"> -->
         </div>
         <div class="pic">
             <img src="../assets/img/skateboardhandshake.png">
