@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/productpage">Products</router-link> |
+      <router-link to="/checkout">Checkout</router-link> |
       <router-link to="/register">Register</router-link> |
       <router-link to="/myaccount">Log in / My account</router-link> 
     </div>
