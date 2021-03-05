@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <div id="bImage">
-      <img id="bImg" />
+      <img :src="require(`../assets/${product.imgFile}`)" id="bImg" /><br> />
     </div>
     <div id="bDesc">
       <h1>{{ product.title }}</h1>
