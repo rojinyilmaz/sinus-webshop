@@ -58,7 +58,7 @@ export default {
                 this.errors.push('Enter your e-mail address')
                 return;
             } else if(!emailValidation.test(this.email)){
-                this.errors.push('Enter your e-mail address')
+                this.errors.push('Make sure your e-mail address is correct')
                 return;
             } else if(this.password === '') {
                 this.errors.push('Enter your password')
