@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoepd>
 @import url('https://fonts.google.com/specimen/Esteban?preview.text_type=custom');
 
 .containerNav{
