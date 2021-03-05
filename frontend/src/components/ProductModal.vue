@@ -10,7 +10,7 @@
         {{ product.longDesc }}
       </p>
       <p>{{product.shortDesc}}</p>
-      <button>ADD TO CART</button><br />
+      <button @click="addCart">ADD TO CART</button><br />
       <img id="stars" src="../assets/RatingStars.svg" />
     </div>
   </div>
@@ -32,6 +32,11 @@ export default {
       return this.$store.getters.getProductById(this.id);
     },
   },
+   methods:{
+      addCart() {
+        this.$store.commit('addProductToCart', this.product)
+      }
+    },
 };
 </script>
 
@@ -76,4 +81,5 @@ button {
 button:active {
   background-color: grey;
 }
+
 </style>

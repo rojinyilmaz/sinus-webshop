@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Checkout from '../views/Checkout.vue'
 import ProductPage from '../views/ProductPage.vue'
 import SingleProduct from '../views/SingleProduct.vue'
+import MyCart from '../views/MyCart.vue'
+
 
 Vue.use(VueRouter)
 
@@ -32,6 +34,11 @@ const routes = [
   {path: '/SingleProduct/:id',
    name: 'SingleProduct',
    component: SingleProduct,
+   props: true
+  },
+  {path: '/cart',
+   name: 'Cart',
+   component: MyCart,
    props: true
   },
   {

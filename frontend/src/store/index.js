@@ -47,7 +47,10 @@ export default new Vuex.Store({
     },
     resetFailLogin(state) {
       state.error = false
-    }
+    },
+addProductToCart(state, payload){
+  state.cart.push(payload)
+}
   },
   actions: {
     getProducts(context) {

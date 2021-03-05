@@ -5,7 +5,10 @@
       <router-link to="/productpage">Products</router-link> |
       <router-link to="/checkout">Checkout</router-link> |
       <router-link to="/register">Register</router-link> |
+      <router-link to="/cart">cart</router-link> |
       <router-link to="/myaccount">Log in / My account</router-link> 
+<img src="./assets/cartwhite.svg" alt=""> 
+
     </div>
     <router-view/>
   </div>
