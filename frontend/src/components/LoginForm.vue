@@ -1,18 +1,17 @@
 <template>
   <div>
-      <p v-if="loginError.error">please make sure your e-mail address and password</p>
-      
-      <div v-if="errors.length">
-          <ul>
-            <li v-for="error in errors" :key="error.index">
-                {{ error }}
-            </li>
-          </ul>
-      </div>
       <form class="log-in" @submit.prevent="onSubmit" >
 
-          <h2>Sign in</h2>
-
+          <h2>LOG IN</h2>
+          
+            <p v-if="loginError.error" class="error">please make sure your e-mail address and password</p>
+            <div v-if="errors.length">
+                <ul>
+                    <li v-for="error in errors" :key="error.index">
+                        {{ error }}
+                    </li>
+                </ul>
+            </div>
           
 
           <input type="text" v-model="email" placeholder="Email" class="em">
@@ -92,9 +91,6 @@ export default {
 }
 
 input{
-    
-    
-   
     outline: none;
     background-color: rgb(255, 255, 255);
     height: 40px;
@@ -103,19 +99,16 @@ input{
     margin-left: 3px;
     margin-bottom: 20px;
     overflow: hidden;
-    
 }
 
 .button {
     margin-top: 50px;
     margin-bottom: 50px;
-    
 }
 
 .button input {
     width: 160px;
     border-radius: 20px;
-    
     background-color: black;
     color: #fff;
     font-size: 1rem;
@@ -124,8 +117,6 @@ input{
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform .1s ease-in;
-   
-
 
     &:active {
       transform: scale(.9);
@@ -146,24 +137,33 @@ p{
 }
 
 h2{
-      font-size: 35px;
+    font-size: 35px;
     text-transform: uppercase;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-    
-
-  }
+}
 
 .em{
-font-size: 17px;
-text-align: center;
-
-
-  }
+    font-size: 17px;
+    text-align: center;
+}
 
 .pass{
     font-size: 17px;
-text-align: center;
+    text-align: center;
 }
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+li{
+    color: rgb(228, 15, 15);
+}
+
+.error {
+    color: rgb(228, 15, 15);
+}
+
 
 
 
