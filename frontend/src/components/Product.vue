@@ -1,7 +1,7 @@
 <template>
         <div class="pwrapper">
         <img :src="require(`../assets/${product.imgFile}`)"/><br>
-            <router-link :to="{name: 'SingleProduct', params: {id: 1}}" class="links"> {{product.title}} </router-link> 
+            <router-link :to="{name: 'SingleProduct', params: {id: product._id}}" class="links"> {{product.title}} </router-link> 
             <p id="desc">{{product.shortDesc}}</p>
             <p id="price">{{product.price}} SEK</p>
             <div><img id="stars" src="../assets/RatingStars.svg"/>
@@ -45,6 +45,9 @@ computed:{
 }
 img{
     margin-bottom: 1em;
+}
+#stars{
+    max-height: 5em;
 }
 
 #price, #desc, #stars{

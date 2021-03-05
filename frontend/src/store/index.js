@@ -6,21 +6,26 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-   products:[],
+    products: [],
 
-   cart:[],
+    cart: [],
 
-    order:[],
+    order: [],
     loggedIn: false,
-    user:{},
+    user: {},
     error: false
   },
   getters: {
-    clothes:state=>{
+    clothes: state => {
       return state.clothes;
     },
-    skateboards:state=>{
+    skateboards: state => {
       return state.skateboards;
+    },
+
+    getProductById: state => (id) => {
+
+      return state.products.find(product => product._id == id)
     }
   },
   mutations: {
@@ -33,7 +38,7 @@ export default new Vuex.Store({
       removeToken();
       state.user = {};
     },
-    setProducts(state, payload){
+    setProducts(state, payload) {
       state.products = payload
     }
     ,
@@ -45,30 +50,30 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    getProducts(context){
+    getProducts(context) {
       fetch("http://localhost:5000/api/products")
-      .then(r => r.json())
-      .then(json => {
-       context.commit('setProducts', json);
-        console.log(json)
-      })
+        .then(r => r.json())
+        .then(json => {
+          context.commit('setProducts', json);
+          console.log(json)
+        })
     },
-    async registerUser({dispatch}, payload) {
+    async registerUser({ dispatch }, payload) {
       const response = await post(REGISTER_URL, payload);
-      if(response) {
+      if (response) {
         await dispatch('authenticateUser', { email: payload.email, password: payload.password })
       }
     },
-    async authenticateUser({commit}, payload) {
+    async authenticateUser({ commit }, payload) {
       const response = await post(AUTH_URL, payload)
-      if(response) {
+      if (response) {
         setToken(response.data.token)
         commit('logIn', response.data.user)
       } else {
-       commit('failLogin')
+        commit('failLogin')
       }
     },
-    logOut({commit}) {
+    logOut({ commit }) {
       commit('logOut');
       commit('resetFailLogin')
     },
