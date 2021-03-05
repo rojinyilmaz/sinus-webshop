@@ -4,6 +4,8 @@
             <router-link :to="{name: 'SingleProduct', params: {id: 1}}" class="links"> {{product.title}} </router-link> 
             <p id="desc">{{product.shortDesc}}</p>
             <p id="price">{{product.price}} SEK</p>
+            <div><img id="stars" src="../assets/RatingStars.svg"/>
+</div>
         </div>
 </template>
 
@@ -38,14 +40,14 @@ computed:{
     border-radius: 5px;
 }
 
-.links, #price, #desc{
+.links, #price, #desc, #stars{
     display: flex;
 }
 img{
     margin-bottom: 1em;
 }
 
-#price, #desc{
+#price, #desc, #stars{
     font-size: 0.8em;
     padding: 0;
     margin: 0;
