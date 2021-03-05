@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
       <main class="register-main">
-          <h1>REGISTER USER</h1>
+          <h1>Register User</h1>
          <p class="error" v-if="errors.length">
              <b>Correct the following error:</b>
                  <ul>
@@ -114,11 +114,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+/* 
+.wrapper{
+    background-color: black;
+} */
+
+
+
 
 .register-main {
-    background-color: white;
-    width: 95%;
+    background: white;
+    border : 1px solid;
+    width: 45%;
+    border-radius: 20px;
+     
+    
     margin-left:auto;
     margin-right:auto;
     display: flex;
@@ -130,17 +141,20 @@ export default {
 .input-form {
     display: grid;
     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
+    /* grid-template-columns: 20rem 20rem; */
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
 
 input {
-    border-radius: 0.5rem;
+    
+    
     outline: none;
-    border: 1px solid #2F2926;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 3px;
+    overflow: hidden;
+    
 }
 
 label {
@@ -153,16 +167,21 @@ label {
     grid-row: 1/2;
     grid-column: 1/2;
     text-align: left;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .email {
     grid-row: 2/3;
     grid-column: 1/2;
+    
 }
 
 .label-for-password {
     grid-row: 1/2;
     grid-column: 2/3;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .password {
@@ -173,6 +192,8 @@ label {
 .label-for-name {
     grid-row: 3/4;
     grid-column: 1/2;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .name {
@@ -183,6 +204,8 @@ label {
 .label-for-street {
     grid-row: 5/6;
     grid-column: 1/2;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .street {
@@ -193,11 +216,15 @@ label {
 .label-for-zip {
     grid-row: 7/8;
     grid-column: 1/2;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .label-for-city {
     grid-row: 7/8;
     grid-column: 2/3;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .zip {
@@ -216,37 +243,56 @@ label {
 }
 
 .button input {
-    width: 12rem;
-    height: 3rem;
-    border-radius: 2rem;
-    outline: none;
-    border: 1px solid #36B52B;
-    background-color: #36B52B;
-    color: black;
-    font-size: 1rem;
-}
-
-.button input:hover {
+    
+   border-radius: 20px;
+    border: 1px solid ;
     background-color: black;
     color: white;
-    border: none;
-}
-.button input:active {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform .1s ease-in;
+
+&:active {
       transform: scale(.9);
+    }
+
+    &:focus{
+      outline: none;
+    }
 }
 
-.button input:focus {
-    outline: none;
-}
+
+button.inver{
+    background-color: transparent;
+    border-color:#fff;
+  }
+
 
 .error {
     color: rgb(228, 15, 15);
+    font-family: serif;
+    font-size: 18px;
 }
+
+/* .alert-color{
+    border-color: rgb(228, 15, 15);
+} */
 
 ul {
     list-style: none;
     padding-left: 0px;
 }
+
+h1{
+    
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
 
 
 

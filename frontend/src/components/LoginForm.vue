@@ -1,24 +1,25 @@
 <template>
-  <div class="wrapper">     
-      <form class="log-in" @submit.prevent="onSubmit">
-          <h1>LOG IN</h1>
-          <div class="error">
-              <p v-if="loginError.error">please make sure your e-mail address and password</p>
-              <div v-if="errors.length">
-                 <ul>
-                    <li v-for="error in errors" :key="error.index">
-                        {{ error }}
-                    </li>
-                </ul>
-            </div>
-          </div>
+  <div>
+      <p v-if="loginError.error">please make sure your e-mail address and password</p>
+      
+      <div v-if="errors.length">
+          <ul>
+            <li v-for="error in errors" :key="error.index">
+                {{ error }}
+            </li>
+          </ul>
+      </div>
+      <form class="log-in" @submit.prevent="onSubmit" >
+
+          <h2>Sign in</h2>
+
           
-          <label for="e-mail">E-mail</label>
-          <input type="text" v-model="email">
-          <label for="password">Password</label>
-          <input type="text" v-model="password">
+
+          <input type="text" v-model="email" placeholder="Email" class="em">
+          <input type="text" v-model="password" placeholder="Password" class="pass">
+          
           <div  class="button">
-              <input type="submit" value="LOG IN">
+              <input class="superbutton" type="submit" value="LOGIN">
           </div>
           
       </form>
@@ -74,80 +75,95 @@ export default {
 }
 </script>
 
-<style scoped>
-
-.wrapper {
-    margin-bottom: 10px;
-}
+<style lang="scss" scoped>
 
 .log-in {
-    background-color: white;
-    width: 95%;
+    background: white;
+    width: 45%;
+    padding: 70px 60px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
     margin-left:auto;
     margin-right:auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-label {
-    margin-bottom: 8px;
-    margin-top: 10px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 input{
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+    
+    
+   
     outline: none;
-    border: 1px solid #2F2926;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 380px;
+    margin-right: 10px;
+    margin-left: 3px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    
 }
 
 .button {
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 
 .button input {
-    display: block;
-    width: 12rem;
-    height: 3rem;
-    border-radius: 2rem;
-    outline: none;
-    border: 1px solid #36B52B;
-    background-color: #36B52B;
-    color: black;
-    font-size: 1rem;
-}
-
-.button input:hover {
+    width: 160px;
+    border-radius: 20px;
+    
     background-color: black;
-    color: white;
-    border: none;
-}
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform .1s ease-in;
+   
 
-.button input:active {
+
+    &:active {
       transform: scale(.9);
-}
+    }
 
-.button input:focus {
-    outline: none;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-.error {
-    color: rgb(228, 15, 15);
+    &:focus{
+      outline: none;
+    }
 }
 
 
+
+
+p{
+    color: black;
+    font-family: serif;
+    font-size: 18px;
+}
+
+h2{
+      font-size: 35px;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    
+
+  }
+
+.em{
+font-size: 17px;
+text-align: center;
+
+
+  }
+
+.pass{
+    font-size: 17px;
+text-align: center;
+}
 
 
 

@@ -3,7 +3,7 @@
       <div class= "container">
       <h1>Hello, friend!</h1>
       <p>Don't have an account yet?</p>
-      <button @click="toRegister">REGISTER</button>
+      <button @click="toRegister">Sign up</button>
       </div>
   </div>
 </template>
@@ -22,46 +22,50 @@ export default {
 <style lang="scss" scoped>
 
 .container{
-    background-color: white;
-    width: 95%;
+    
+    background: linear-gradient(to bottom right, #121312, #020202);
+    width: calc(20% - 90px);
+    padding: 20px 60px;
+    border-radius: 20px;
+    
     margin-left:auto;
     margin-right:auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  
+
 }
 
 h1{
   font-size: 30px;
-  color: black;
+    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color : white;
 }
 
-button {
-    display: block;
-    width: 12rem;
-    height: 3rem;
-    border-radius: 2rem;
-    outline: none;
-    border: 1px solid #36B52B;
-    background-color: #36B52B;
+button{
+    
+    border-radius: 20px;
+    border: 1px solid ;
+    background-color: rgb(238, 233, 233);
     color: black;
     font-size: 1rem;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform .1s ease-in;
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    &:focus{
+      outline: none;
+    }
 }
 
-button:hover {
-    background-color: black;
-    color: white;
-    border: none;
-}
-
-button:active {
-    transform: scale(.9);
-}
-
-button:focus {
-    outline: none;
-}
 </style>
