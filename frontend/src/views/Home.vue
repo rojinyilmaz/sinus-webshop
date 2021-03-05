@@ -7,13 +7,13 @@
 
 <script>
 // @ is an alias to /src
-import TheTop from '../component/TheTop.vue'
-import TheMiddle from '../component/TheMiddle.vue'
+import TheTop from '../components/TheTop.vue'
+import TheMiddle from '../components/TheMiddle.vue'
 
 
 export default {
   name: 'Home',
-  component: {
+  components: {
     TheTop,
     TheMiddle,
   }
