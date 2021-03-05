@@ -5,13 +5,14 @@
     
 <hr class="line1"/>
       <h3>My cart</h3>
-      <ul>
-  <li v-for="(product, i) in getCartItems" v-bind:key="i">
-    <h4>{{product.title}}</h4>
-    <h5>{{product.price}} SEK</h5>
+      <div class="cartlist">
+  <div v-for="(product, i) in getCartItems" v-bind:key="i">
+    <div class="h4"><h4>{{product.title}}</h4></div>
+   <div class="h5"><h5>{{product.price}} SEK</h5></div>
     <div><img :src="require(`../assets/${product.imgFile}`)"/></div>
-  </li>
-</ul>
+</div>
+      </div>
+      <button @click="$router.push('/checkout')">Checkout</button>
   </main>
 </div>
 </template>
@@ -26,7 +27,8 @@ components:{
 computed: {
   getCartItems(){
     return this.$store.state.cart
-  }
+  },
+ 
 }
 }
 </script>
@@ -34,7 +36,6 @@ computed: {
 <style scoped>
 .wrapper{
     background-color: black;
-     height: 89vh;
     margin-left: -1%;
   margin-right: -1%;
   margin-bottom: -1%;
@@ -76,16 +77,33 @@ h3{
     margin-left: 3em;
 }
 
-h4, h4 {
-  margin-right: 50%;
+.cartlist{
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-inline: 3.5rem;  
 }
 
+
+
 img{
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+
 }
-ul {
-  list-style-type: none;
- }
+
+button{
+  width: 15%;
+  background-color: #36B52B;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  right: 5.5rem;
+    bottom: 5rem;
+    position: absolute;
+}
 
 </style>
