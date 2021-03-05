@@ -1,63 +1,113 @@
 <template>
-  <div class="containerNav">
-     <nav class=navbar>
-         <div class="hamburger-menu">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-        </div>
-
-        <ul class="nav-list">
-            <li><router-link to="/skateboards">Skateboards</li>
-            <li><router-link to="/accessories">Accessories</li>
-            <li><router-link to="/clothes">Clothes</li>
-            <li><router-link to="/home">Home</li>
-        </ul>
-     </nav>
+   <div>
+      <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
+      <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+      <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+      <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
     </div>
+    <transition name="menu">
+        <div class="menu" v-show="ActiveBtn">
+          <!-- <router-link to="/">Home</router-link> -->
+          <router-link to="/">Skateboardes</router-link>
+          <router-link to="/">Accessories</router-link> 
+          <router-link to="/">Clothes</router-link> 
+          <router-link to="/">Home</router-link>
+    
+        </div>
+    </transition>
+  </div>
 </template>
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
 export default {
-
+    data() {
+        return{
+            ActiveBtn: false
+        }
+    }
 }
 </script>
 
+
 <style>
-@import url('https://fonts.google.com/specimen/Esteban?preview.text_type=custom');
 
-.containerNav{
-    width: 100%;
-    height: 100vh;
-
-}
-/* Stoppa detta i navbar klassen som är i home komponenten för att få det att
- fungera, Detta styr själva navbar menyn som kommer ut*/ 
-.navbar {
-    width: 300px;
-    height: 100%;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hamburger_btn {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 72px;
+  cursor: pointer;
+  z-index: 50;
 }
 
-.hamburger-menu {
-  width: 35px;
-  height: 39px;
+.hamburger_btn .line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 32px;
+  height: 2px;
+  background: #333333;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: 16px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_02 {
+  top: 26px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_03 {
+  top: 36px;
+  transition: 0.4s ease;
+}
+
+
+.btn_line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.btn_line02 {
+     transition: 0.4s ease;
+  opacity: 0;
+}
+.btn_line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+
+
+.menu-enter-active, .menu-leave-active {
+  transition: opacity 0.4s;
+}
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+.menu-leave, .menu-enter-to{
+  opacity: 1;
+}
+
+.menu {
+  background-color: rgba(247, 240, 240, 0.671);
+  z-index: 30;
+  padding: 2rem 1rem;
   position: fixed;
-  top: 50px;
-  right: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  width: 20rem;
+  height: 80rem;
+  top: 0;
+  left: 0;
 }
-.line {
-  width: 100%;
-  height: 3px;
-  background-color: white;
+.menu a {
+  color: rgb(206, 197, 197);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0 2rem;
 }
+
 </style>

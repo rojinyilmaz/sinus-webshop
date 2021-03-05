@@ -11,12 +11,7 @@
         <div class="skate">
             <img src="../assets/img/skateboardes.png">
         </div>
-        <div class="hamburger-menu">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-        </div>
-
+        
          <div class="miniText">
         <hr>
         <strong>Northern 

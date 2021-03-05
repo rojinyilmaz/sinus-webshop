@@ -2,7 +2,7 @@
 
 <div class="middleContainer">
     <div class="logotype">
-      <img src="../assets/comp.png">
+      <img src="../assets/Component 23.png">
     </div>
 
     <div class="middlepic">
