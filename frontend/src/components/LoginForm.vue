@@ -2,7 +2,7 @@
   <div>
       <form class="log-in" @submit.prevent="onSubmit" >
 
-          <h2>LOG IN</h2>
+          <h1>LOG IN</h1>
           
             <p v-if="loginError.error" class="error">please make sure your e-mail address and password</p>
             <div v-if="errors.length">
@@ -17,10 +17,15 @@
           <input type="text" v-model="email" placeholder="Email" class="em">
           <input type="text" v-model="password" placeholder="Password" class="pass">
           
-          <div  class="button">
-              <input class="superbutton" type="submit" value="LOGIN">
+          <div class="button">
+              <input type="submit" value="LOGIN">
           </div>
-          
+          <section class="register"></section>
+          <h1>Hello, friend!</h1>
+          <p>Don't have an account yet?</p>
+          <div class="button">
+              <input type="submit" value="SIGNIN">
+          </div>
       </form>
   </div>
 </template>
@@ -50,7 +55,9 @@ export default {
             this.$store.dispatch('authenticateUser', logInUser)
             }
         },
-
+        toRegister() {
+            this.$router.push('/register')
+        },
         validation(){
             const emailValidation = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
             this.errors.splice(0,1);
@@ -85,9 +92,9 @@ export default {
     margin-left:auto;
     margin-right:auto;
     display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 input{
@@ -99,11 +106,6 @@ input{
     margin-left: 3px;
     margin-bottom: 20px;
     overflow: hidden;
-}
-
-.button {
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .button input {
@@ -127,16 +129,14 @@ input{
     }
 }
 
-
-
-
 p{
     color: black;
     font-family: serif;
     font-size: 18px;
+    margin-top: 0px;
 }
 
-h2{
+h1{
     font-size: 35px;
     text-transform: uppercase;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
@@ -163,8 +163,5 @@ li{
 .error {
     color: rgb(228, 15, 15);
 }
-
-
-
 
 </style>

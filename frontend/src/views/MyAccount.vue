@@ -6,7 +6,6 @@
       </div>
       <div v-else>
         <LoginForm />
-        <RegisterHome />
       </div>
      
 
@@ -15,12 +14,10 @@
 
 <script>
 import LoginForm from '../components/LoginForm.vue';
-import RegisterHome from '../components/registerHome.vue';
 import UserInformation from '../components/UserInformation.vue'
 export default {
   components: { 
     UserInformation,
-    RegisterHome,
     LoginForm,
      },
   computed: {
