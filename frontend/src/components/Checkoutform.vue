@@ -3,19 +3,19 @@
       <h3>Delivery adress</h3>
       <form class="delivery">
     <label for="name">Name</label>
-    <input class="name" type="text" v-model="user.name">
+    <input class="name" type="text" v-model="name">
 
     <label for="email">Email</label>
-    <input class="email" type="text" v-model="user.email">
+    <input class="email" type="text" v-model="email">
 
     <label for="street">Street</label>
-    <input class="street" type="text" v-model="user.street">
+    <input class="street" type="text" v-model="street">
 
     <label for="zip">Zip</label>
-    <input class="zip" type="text" v-model="user.zip">
+    <input class="zip" type="text" v-model="zip">
 
     <label for="city">City</label>
-    <input class="city" type="text" v-model="user.city">
+    <input class="city" type="text" v-model="city">
   
     <input class="submit" type="submit" value="Submit">
   </form>
@@ -26,7 +26,11 @@
 export default {
     data() {
         return {
-            name: ''
+            name: '',
+            email: '',
+            street: '',
+            zip: '',
+            city: ''
         }
     },
     computed: {
@@ -37,6 +41,15 @@ export default {
             return this.$store.state.loggedIn
         },
     
+    },
+    mounted() {
+      if(this.loggedIn) {
+        this.name = this.user.name
+        this.email = this.user.email
+        this.street = this.user.address.street
+        this.zip = this.user.address.zip
+        this.city = this.user.address.city
+      }
     }
 
 }
