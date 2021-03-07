@@ -25,6 +25,9 @@ const get = async (url) => {
         console.log(error);
         
     }}
+
+
+    
 const setToken = (token) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
     }
