@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h3>Delivery adress</h3>
+      <h3 class="deliverytext">Delivery adress</h3>
       <form class="delivery">
     <label for="name">Name</label>
     <input class="name" type="text" v-model="name">
@@ -16,8 +16,33 @@
 
     <label for="city">City</label>
     <input class="city" type="text" v-model="city">
-  
-    <input class="submit" type="submit" value="Submit">
+
+
+ <div class="payment">
+   <h3>Payment method</h3>
+ <img src="../assets/klarna.svg" alt="klarna">
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+<img src="../assets/mastercard.svg" alt="mastercard">
+  <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+ <img src="../assets/paypal.svg" alt="paypal">
+  <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+ <img src="../assets/visa.svg" alt="visa">
+  <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+  </div>
+    <br>
+    <input class="submit" type="submit" value="Finish">
   </form>
   </div>
 </template>
@@ -59,7 +84,11 @@ export default {
 
 h3{
     text-decoration: underline;
-    margin-left: 3em;
+}
+
+.deliverytext{
+    text-decoration: underline;
+    margin-left: 1em;
 }
 
 label{
@@ -76,7 +105,6 @@ input[type=text] {
   box-sizing: border-box;
 
 }
-
 
 .submit{
   width: 20%;
@@ -101,7 +129,72 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+.payment{
+  display: grid;
+  position: absolute;
+    left: 55rem;
+   top: 14.5rem;
+    grid-gap: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3.5px;
+  bottom: 3.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #36B52B;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #36B52B;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 
 
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 </style>

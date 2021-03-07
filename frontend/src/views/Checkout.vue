@@ -10,6 +10,7 @@
 <script>
 
 import Checkoutform from '../components/Checkoutform.vue'
+
 export default {
     components: {
         Checkoutform
@@ -55,5 +56,9 @@ export default {
     margin-top: 1rem;
 }
 
+.payment{
+    display: grid;
+   grid-template-columns: 1fr;
+}
 
 </style>
