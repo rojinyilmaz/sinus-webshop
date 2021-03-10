@@ -17,8 +17,8 @@
     <label for="city">City</label>
     <input class="city" type="text" v-model="city">
 
-
- <div class="payment">
+<form  @submit.prevent="onSubmit">
+  <div class="payment">
    <h3>Payment method</h3>
  <img src="../assets/klarna.svg" alt="klarna">
     <label class="switch">
@@ -42,8 +42,11 @@
 </label>
   </div>
     <br>
-    <input class="submit" type="submit" value="Finish">
+    <input class="submit" type="submit" value="Finish" >
   </form>
+
+</form>
+ 
   </div>
 </template>
 
@@ -55,7 +58,8 @@ export default {
             email: '',
             street: '',
             zip: '',
-            city: ''
+            city: '',
+            items: {}
         }
     },
     computed: {
@@ -65,6 +69,9 @@ export default {
         loggedIn(){
             return this.$store.state.loggedIn
         },
+        cart() {
+          return this.$store.state.cart
+        }
     
     },
     mounted() {
@@ -74,6 +81,14 @@ export default {
         this.street = this.user.address.street
         this.zip = this.user.address.zip
         this.city = this.user.address.city
+      }
+
+    },
+    methods: {
+      onSubmit() {
+        this.items = this.cart
+        this.$store.dispatch('submitOrder', this.items)
+        this.$router.push('/')
       }
     }
 
