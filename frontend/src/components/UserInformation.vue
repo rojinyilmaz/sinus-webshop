@@ -1,58 +1,50 @@
 <template>
-  <div class="main">
+<div class="main">
     <h1>My account</h1>
-    <p>Name: {{ me.name }}</p>
-    <p>Email: {{ me.email }}</p>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
     <p>Address:</p>
-    <template v-if="me.address">
-      <p>Street: {{ me.address.street }}</p>
-      <p>Zipcode: {{ me.address.zip }}</p>
-      <p>City: {{ me.address.city }}</p>
+    <template v-if="user.address">
+      <p>Street: {{ user.address.street }}</p>
+      <p>Zipcode: {{ user.address.zip }}</p>
+      <p>City: {{ user.address.city }}</p>
     </template>
     <h1>Order History</h1>
-    <template v-if="me.orderHistory">
-      {{ orderHistory }}
+    <template v-if="orderHistory.length">
+      <ul v-for="(item, index) in orderHistory" :key="index">
+        <li>{{ item.title }}</li>
+        <li>{{ item.price }} kr</li>
+        
+      </ul>
     </template>
     <template v-else>
       <p>You have no order history</p>
     </template>
     <button @click="logOut">Log out</button>
   </div>
+  
 </template>
 
 <script>
-import { ME_URL, get } from "../api/api.js";
-
 export default {
-  data() {
-    return {
-      me: {},
-    };
-  },
-  async created() {
-    const response = await get(ME_URL);
-    this.me = response.data;
-  },
-  computed: {
-    orderHistory() {
-      const history = this.me.orderHistory
-      return  history.forEach(order => {
-        Object.keys(order).forEach(key => {
-          return `${key}: ${order[key]}`
-        })
-      })
-    }
-  },
-  methods: {
+    computed: {
+        user() {
+            return this.$store.state.user
+        },
+        orderHistory() {
+            return this.$store.state.orderHistory
+        }
+    },
+    methods: {
     logOut() {
       this.$store.dispatch('logOut');
     }
   }
-};
+
+}
 </script>
 
 <style scoped>
-
 .main {
    background-color: white;
     width: 95%;
@@ -71,6 +63,10 @@ p {
   color: black;
   margin-bottom: 10px;
   margin-top: 0px;
+}
+
+ul {
+  list-style: none;
 }
 
 button {
@@ -100,3 +96,4 @@ button:focus {
     outline: none;
 }
 </style>
+

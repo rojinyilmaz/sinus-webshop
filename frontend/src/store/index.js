@@ -7,13 +7,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     products: [],
-
     cart: [],
-
     order: [],
     loggedIn: false,
     user: {},
-    error: false
+    error: false,
+    orderHistory: []
   },
   getters: {
     clothes: state => {
@@ -22,7 +21,6 @@ export default new Vuex.Store({
     skateboards: state => {
       return state.skateboards;
     },
-
     getProductById: state => (id) => {
 
       return state.products.find(product => product._id == id)
@@ -48,9 +46,19 @@ export default new Vuex.Store({
     resetFailLogin(state) {
       state.error = false
     },
-addProductToCart(state, payload){
-  state.cart.push(payload)
-}
+    addProductToCart(state, payload){
+      state.cart.push(payload)
+    },
+    submitOrder(state, payload){
+      if(state.loggedIn){
+        state.orderHistory.push(payload)
+        const flat = [].concat(...state.orderHistory)
+        state.orderHistory = flat
+        state.cart = []
+      } else {
+        state.cart = []
+      }
+    }
   },
   actions: {
     getProducts(context) {
@@ -80,6 +88,9 @@ addProductToCart(state, payload){
       commit('logOut');
       commit('resetFailLogin')
     },
+    submitOrder({ commit }, payload) {
+      commit('submitOrder', payload)
+    }
   },
   modules: {
   }
