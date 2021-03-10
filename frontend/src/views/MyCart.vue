@@ -12,6 +12,9 @@
     <div><img :src="require(`../assets/${product.imgFile}`)"/></div>
 </div>
       </div>
+      <footer class="total" v-if="getCartItems.length">
+                <h2>Total {{ total }} kr</h2>
+            </footer>
       <button @click="$router.push('/checkout')">Checkout</button>
   </main>
 </div>
@@ -28,7 +31,9 @@ computed: {
   getCartItems(){
     return this.$store.state.cart
   },
- 
+  total(){
+    return this.$store.getters.total;
+    }
 }
 }
 </script>
@@ -75,6 +80,13 @@ computed: {
 h3{
     text-decoration: underline;
     margin-left: 3em;
+}
+
+h2{
+  display: flex;
+  justify-content: flex-end;
+  margin-inline: 6rem;
+    text-decoration: underline;
 }
 
 .cartlist{
