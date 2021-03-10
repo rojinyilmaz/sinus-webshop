@@ -22,7 +22,7 @@
           </div>
           <section class="register"></section>
           <h1>Hello, friend!</h1>
-          <p>Don't have an account yet?</p>
+          <router-link to="/register"><p class="register">Don't have a account yet?</p></router-link>
           <div class="button">
               <input type="submit" value="SIGNIN">
           </div>
@@ -134,6 +134,10 @@ p{
     font-family: serif;
     font-size: 18px;
     margin-top: 0px;
+}
+
+.register:hover{
+    color: blue;
 }
 
 h1{
