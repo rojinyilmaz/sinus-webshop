@@ -19,13 +19,14 @@
 
         </ul>
     </div>
+  
 
 </template>
 
 
 <script>
 export default {
-    
+
 }
 </script>
 
@@ -47,7 +48,7 @@ body{
     top: 50%;
     width: 40px;
     height: 40px;
-    margin-top: 229px;
+    margin-top: 29px;
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -90,12 +91,12 @@ body{
     overflow: hidden;
     position: absolute;
     z-index: 0;
-    left: 237px;
-    top: 247px;
-    width: 249px;
-    height: 268px;
-    margin: 10px;
-    padding: 10px;
+    left: 377px;
+    top: 147px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
     border: 3px solid white;
     background-color: #333;
     cursor: pointer;

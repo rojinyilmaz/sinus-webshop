@@ -10,10 +10,12 @@
           <div class="menutext">
               <!-- <router-link to="/">Home</router-link> -->
           <ul>
-            <router-link to="/menu">Skateboard</router-link>
-            <router-link to="/about">Accessories</router-link> 
-            <router-link to="/profile">Clothes</router-link> 
-            <router-link to="/status">Home</router-link>
+            <router-link to="/">Home</router-link>
+            <router-link to="/productpage">Products</router-link> 
+            <router-link to="/checkout">Checkout</router-link> 
+            <router-link to="/register">Register</router-link> 
+            <router-link to="/cart">Cart</router-link>
+            <router-link to="/myaccount">Log in/My Account</router-link> 
           </ul>
             </div>
         </div>
@@ -108,7 +110,7 @@ export default {
 }
 .menutext{
 
-  color: rgb(243, 243, 243);
+  color: white;
   text-decoration: underline;
   font-size: 6rem;
   padding: 0 2rem;

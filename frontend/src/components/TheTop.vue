@@ -1,9 +1,9 @@
 <template>
 <div class="hello">
     <div class="container">
-
+ 
         <div class="logo">
-             <img src="../assets/img/Comp.png">
+            <img src="../assets/img/Comp.png">
         </div>
         <div class="pic">
             <img src="../assets/img/skateboardhandshake.png">
@@ -12,12 +12,21 @@
             <img src="../assets/img/skateboardes.png">
         </div>
         
+
+        <div class="gtblock">
+          
+         <p class="gttext">&#9826; GOOD TIME <img class ="withimg" src="../assets/img/Withpic.png"> <br>  GREAT FRIENDS   </p> 
+        
+        </div>
+ 
          <div class="miniText">
+ 
         <hr>
-        <strong>Northern 
-          Europe's largest 
-          skateboard shop</strong>
+        Northern<br>
+        Europe's largest<br> 
+        skateboard shop
         <hr>
+ 
       </div>
  
     </div>
@@ -36,6 +45,42 @@ export default {
 
 
 <style scoped>
+ 
+@import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+ 
+.gtblock{
+  
+  
+  width: 560px;
+  
+    
+}
+ 
+.gttext{
+font-size: 60px;
+color: white;
+margin-right: 50px;
+margin-top: 100px;
+line-height: 60px;
+text-align: left;
+font-family: 'Esteban', serif;
+ 
+}
+ 
+.withimg{
+  width: 100px;
+  margin-top: 5px;
+  height:60px;
+  
+ 
+  
+}
+
+
+
+
+
+ 
 .container {
     display: grid;
     grid-template-columns:  20% 23% 10% 10% 10% 20% 20%;
@@ -73,5 +118,9 @@ export default {
   grid-row: 5;
   grid-column: 2;
   font-family: m;
+}
+ 
+hr{
+  width: 35%;
 }
 </style>

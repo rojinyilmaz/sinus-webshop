@@ -2,7 +2,7 @@
  
 <div class="middleContainer">
     <div class="logotype">
-      <!-- <img src="../assets/comp.png"> -->
+       <img src="../assets/img/Comp.png">
     </div>
  
     <div class="middlepic">
@@ -37,10 +37,10 @@ export default {
  
 <style scoped>
  @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
- 
+
 .middleContainer {
   display: grid;
-  grid-template-columns: 10%  15% 10% 7% 35%;
+  grid-template-columns: 10%  15% 10% 7% 25%;
   grid-template-rows: 20% 40% 70% 5% 60%;
   max-width: 100%;
   margin: 0 auto;
@@ -50,7 +50,7 @@ export default {
   grid-row: 2;
 }
 .logotype {
-  grid-column: 8;
+  grid-column: 6;
    grid-row: 2;
 }
 .gretaaaa {
