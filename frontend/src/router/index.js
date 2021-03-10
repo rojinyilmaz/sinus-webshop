@@ -5,6 +5,7 @@ import Checkout from '../views/Checkout.vue'
 import ProductPage from '../views/ProductPage.vue'
 import SingleProduct from '../views/SingleProduct.vue'
 import MyCart from '../views/MyCart.vue'
+import ThankYou from '../views/ThankYou.vue'
 
 
 
@@ -41,6 +42,10 @@ const routes = [
    name: 'Cart',
    component: MyCart,
    props: true
+  },
+  {path: '/thankyou',
+   name: 'ThankYou',
+   component: ThankYou,
   },
   {
     path: "/myaccount",

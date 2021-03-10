@@ -88,7 +88,7 @@ export default {
       onSubmit() {
         this.items = this.cart
         this.$store.dispatch('submitOrder', this.items)
-        this.$router.push('/')
+        this.$router.push('/thankyou')
       }
     }
 
@@ -136,6 +136,9 @@ input[type=submit]:hover {
 }
 
 .delivery {
+   position: relative;
+   display: inline-block;
+   right: 0;
   display: grid;
   grid-template-columns: 1fr;
     grid-gap: 1px;
@@ -144,11 +147,12 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+
 .payment{
   display: grid;
   position: absolute;
-    left: 55rem;
-   top: 14.5rem;
+    left: 47rem;
+    top: -3.5rem;
     grid-gap: 15px;
 }
 
