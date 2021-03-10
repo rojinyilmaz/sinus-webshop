@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .productwrapper{
     padding-top: 4em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .productSection{
