@@ -7,6 +7,7 @@ import SingleProduct from '../views/SingleProduct.vue'
 import MyCart from '../views/MyCart.vue'
 
 
+
 Vue.use(VueRouter)
 
 const routes = [

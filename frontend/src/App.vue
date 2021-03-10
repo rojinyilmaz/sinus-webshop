@@ -3,22 +3,20 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/productpage">Products</router-link> |
-      <router-link to="/checkout">Checkout</router-link> |
-      <router-link to="/register">Register</router-link> |
-      <router-link to="/cart">cart</router-link> |
-      <router-link to="/myaccount">Log in / My account</router-link> 
-<img src="./assets/cartwhite.svg" alt=""> 
-
+           <router-link to="/myaccount"><img src="./assets/user.svg"/></router-link>
+      <Cart/>
     </div>
     <router-view/>
   </div>
 </template>
 <script>
+import Cart from './components/Cart.vue'
+
 export default {
-  Components:{
-    
-  }
+  name: 'App',
+  components: {Cart}
 }
+
 </script>
 
 <style lang="scss">
