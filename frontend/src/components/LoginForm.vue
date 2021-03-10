@@ -23,9 +23,6 @@
           <section class="register"></section>
           <h1>Hello, friend!</h1>
           <router-link to="/register"><p class="register">Don't have a account yet?</p></router-link>
-          <div class="button">
-              <input type="submit" value="SIGNIN">
-          </div>
       </form>
   </div>
 </template>
