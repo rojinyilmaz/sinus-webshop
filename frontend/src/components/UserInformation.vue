@@ -46,14 +46,14 @@ export default {
 
 <style scoped>
 .main {
-   background-color: white;
-    width: 95%;
-    margin-left:auto;
-    margin-right:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: white;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -89,11 +89,11 @@ button:hover {
 }
 
 button:active {
-      transform: scale(.9);
+  transform: scale(.9);
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 </style>
 
