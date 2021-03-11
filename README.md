@@ -179,8 +179,8 @@ Tisdag 23/2 2021
 
 Möte med gruppen angående vilket projekt alla vill jobba med
 Klona repository
-Skapa trelloboard board
-Utse scrummaster(Rojin)
+Skapade Scrum trelloboard board
+Utsåg scrummaster(Rojin)
 
 Onsdag 24/2 2021
 
@@ -191,6 +191,7 @@ Jobbar vidare homepage och nav(Samme)
 Jobbar vidare med Checkout och varucart(Rojin)
 Jobbar med inloggningssidan(Shamil)
 Jobbar med registreringssidan(Midori)
+Om vi fastnar ber vi varandra om hjälp i chatten.
 
 Torsdag 25/2
 Uppföljningsmöte kl13
@@ -202,11 +203,32 @@ Fortsätta jobba med projektet
 ### Agenda för vecka 9
 Måndag 1/3
 Alla fortsätter att jobba med sina uppgifter
+Frågar om hjälp i chatten
 
 Tisdag 2/3
 Uppföljningsmöte samt samtal med Niklas
 
 Onsdag 3/3
-Alla fortsätter att jobba med sina projekt
+Alla fortsätter att jobba med sina arbetsuppgifter
 
 Torsdag 4/3
+Produkt till singleProduct view. 
+
+Fredag 5/3
+Blev inte klara i tid. Jobbar vidare med projektet.
+
+### Agenda för vecka 10
+Måndag 8/3 
+Satte en deadline 11 mars
+
+Tisdag 9/3
+Jobbar klart med det sista
+
+Onsdag 10/3
+Jobbar klart med det sista
+
+Torsdag 11/3
+Inlämning
+
+Utvärdering:
+Det har gått bra, alla har varit delaktiga i projektet och gjort sin del. Det enda mindre bra var bara att alla hade lite olika tider för att kunna delta i Scrum möten. Men utöver det var det bra samarbete och bra återkoppling i chatten. 
