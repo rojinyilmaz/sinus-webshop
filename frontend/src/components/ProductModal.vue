@@ -48,13 +48,15 @@ export default {
   margin: 4em;
 }
 #bImage {
-  width: 60%;
+  width: 50%;
+  min-height: 100%;
+  
 }
 #bImg {
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 50%;
   margin: 0;
-  background-color: grey;
+  background-image: linear-gradient(black, white);
+  min-height: 100%;
 }
 #bDesc {
   width: 40%;
@@ -76,10 +78,15 @@ button {
   border-radius: 0.3em;
   background-color: black;
   color: white;
+  margin-top: 2em;
 }
 
 button:active {
   background-color: grey;
+}
+
+#stars{
+  margin-top: 1em;
 }
 
 </style>
