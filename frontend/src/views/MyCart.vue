@@ -124,7 +124,7 @@ button{
   transition: transform .1s ease-in;   
   cursor: pointer;
   right: 5.5rem;
-  bottom: 5rem;
+  bottom: 8rem;
   position: absolute;
 }
 
