@@ -16,8 +16,7 @@ import Cart from './components/Cart.vue'
 import TheNav from './components/TheNav.vue'
 export default {
   name: 'App',
-  components: {Cart},
-  TheNav
+  components: {Cart, TheNav},
 }
 
 </script>
