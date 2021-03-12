@@ -1,7 +1,7 @@
 <template>
    <div class="hello">
    <TheTop />
-   <TheMiddle /> 
+   <TheMiddle/> 
    <the-nav/>
    <the-footer/>
   
@@ -20,8 +20,8 @@ export default {
   components: {
     TheTop,
     TheMiddle,
-    TheNav,
-    TheFooter
+    TheFooter,
+    TheNav
   }
 
 }

@@ -4,16 +4,19 @@
   <img class="logo" src="../assets/Sinuscheckout.svg"/>  
 <hr class="line1"/>
 <Checkoutform />
+<the-nav/>
 </main>
  </div>
 </template>
 <script>
 
 import Checkoutform from '../components/Checkoutform.vue'
+import TheNav from '../components/TheNav.vue'
 
 export default {
     components: {
-        Checkoutform
+        Checkoutform,
+        TheNav
     }
 }
 </script>

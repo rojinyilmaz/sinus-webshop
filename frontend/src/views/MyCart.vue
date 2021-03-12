@@ -13,16 +13,17 @@
 </div>
       </div>
       <button @click="$router.push('/checkout')">Checkout</button>
+      <the-nav/>
   </main>
 </div>
 </template>
 
 <script>
-
+import TheNav from '../components/TheNav.vue'
 
 export default {
 components:{
-
+  TheNav
 },
 computed: {
   getCartItems(){

@@ -26,6 +26,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
 export default {
+  components: {
+   
+  },
     data() {
         return{
             ActiveBtn: false
@@ -37,6 +40,9 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
 
+a{
+  color: white;
+}
 .hamburger_btn {
   position: fixed; 
   top: 0;
@@ -112,11 +118,11 @@ export default {
 
   color: white;
   text-decoration: underline;
-  font-size: 6rem;
+  font-size: 4rem;
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   height: calc(100vh - 2rem);
   font-family: 'Esteban', serif;
 
@@ -126,6 +132,7 @@ ul {
     flex-direction: column;
     align-items: flex-end;
     width: 70%;
+    color: white;
  
 }
 

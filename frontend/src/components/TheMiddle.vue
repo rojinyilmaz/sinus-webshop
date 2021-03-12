@@ -36,7 +36,8 @@ export default {
 
  
 <style scoped>
- @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
 
 .middleContainer {
   display: grid;
