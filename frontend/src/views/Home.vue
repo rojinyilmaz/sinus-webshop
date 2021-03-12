@@ -2,7 +2,6 @@
    <div class="hello">
    <TheTop />
    <TheMiddle/> 
-   <the-nav/>
    <the-footer/>
   
   </div> 
@@ -12,7 +11,6 @@
 // @ is an alias to /src
 import TheTop from '../components/TheTop.vue'
 import TheMiddle from '../components/TheMiddle.vue'
-import TheNav from '../components/TheNav.vue'
 import TheFooter from '../components/TheFooter.vue'
 
 export default {
@@ -21,7 +19,6 @@ export default {
     TheTop,
     TheMiddle,
     TheFooter,
-    TheNav
   }
 
 }

@@ -4,7 +4,6 @@
   <img class="logo" src="../assets/Sinuscheckout.svg"/>  
 <hr class="line1"/>
 <Checkoutform />
-<the-nav/>
 </main>
 <div class="vl"></div>
  </div>
@@ -12,12 +11,10 @@
 <script>
 
 import Checkoutform from '../components/Checkoutform.vue'
-import TheNav from '../components/TheNav.vue'
 
 export default {
     components: {
         Checkoutform,
-        TheNav
     }
 }
 </script>
