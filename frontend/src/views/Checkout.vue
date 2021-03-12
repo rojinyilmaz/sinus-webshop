@@ -6,6 +6,7 @@
 <Checkoutform />
 <the-nav/>
 </main>
+<div class="vl"></div>
  </div>
 </template>
 <script>
@@ -32,20 +33,23 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-.checkout{
+.checkout:not(.logo) {
     background-color: #ffff;
     display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 96%;
-        height: 84vh;
-        border-radius: 3px;
+    flex-direction: column;
+    text-align: left;
+    width: 96%;
+    height: 84vh;
+    border-radius: 3px; 
+  position: relative;
 }
 
+
+
 .logo{
-  
   text-align: center;
   width: fit-content;
   margin-left: auto;
@@ -59,9 +63,15 @@ export default {
     margin-top: 1rem;
 }
 
-.payment{
-    display: grid;
-   grid-template-columns: 1fr;
+.vl{
+      border-left: 5px solid black;
+    height: 65%;
+    position: absolute;
+    left: 60%;
+    margin-left: -3px;
+    top: 14.5rem;
 }
+
+
 
 </style>

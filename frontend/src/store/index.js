@@ -24,6 +24,13 @@ export default new Vuex.Store({
     getProductById: state => (id) => {
 
       return state.products.find(product => product._id == id)
+    },
+    total: state =>{
+      let total = 0;
+      state.cart.forEach(product => {
+        total += product.price
+      })
+      return total;
     }
   },
   mutations: {

@@ -44,10 +44,8 @@
     <br>
     <input class="submit" type="submit" value="Finish" >
   </form>
-
 </form>
- 
-  </div>
+ </div>
 </template>
 
 <script>
@@ -88,7 +86,7 @@ export default {
       onSubmit() {
         this.items = this.cart
         this.$store.dispatch('submitOrder', this.items)
-        this.$router.push('/')
+        this.$router.push('/thankyou')
       }
     }
 
@@ -121,21 +119,29 @@ input[type=text] {
 
 }
 
+
 .submit{
-  width: 20%;
-  background-color: #36B52B;
-  color: white;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
+  border-radius: 20px;
+    border: 1px solid ;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform .1s ease-in;   
 }
+
 
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
 .delivery {
+   position: relative;
+   display: inline-block;
+   right: 0;
   display: grid;
   grid-template-columns: 1fr;
     grid-gap: 1px;
@@ -144,12 +150,13 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+
 .payment{
   display: grid;
   position: absolute;
-    left: 55rem;
-   top: 14.5rem;
-    grid-gap: 15px;
+    inset-inline-end: 7rem;
+    top: -3.6rem;
+    grid-gap: 18px;
 }
 
 .switch {
