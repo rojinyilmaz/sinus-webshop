@@ -15,11 +15,13 @@ import Product from '@/components/Product.vue'
 import TheNav from '../components/TheNav.vue'
 
 export default {
-    components: { Product },
-    TheNav,
- created: function () {
-   this.$store.dispatch("getProducts")
-    },
+    components: {
+        Product,
+        TheNav
+        },
+    created: function () {
+    this.$store.dispatch("getProducts")
+        },
     computed:{
         products(){
             return this.$store.state.products
@@ -42,7 +44,5 @@ export default {
     padding-left: 2em;
     padding-right: 2em;
 }
-
-
 
 </style>

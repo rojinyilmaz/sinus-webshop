@@ -13,11 +13,14 @@
       <button @click="addCart">ADD TO CART</button><br />
       <img id="stars" src="../assets/RatingStars.svg" />
     </div>
+    <TheNav />
   </div>
 </template>
 
 <script>
+import TheNav from './TheNav.vue';
 export default {
+  components: { TheNav },
   created: function () {
     this.id = this.$route.params.id;
   },
