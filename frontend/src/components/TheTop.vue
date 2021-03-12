@@ -49,31 +49,24 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
  
 .gtblock{
-  
-  
   width: 560px;
-  
-    
 }
  
 .gttext{
-font-size: 60px;
-color: white;
-margin-right: 50px;
-margin-top: 100px;
-line-height: 60px;
-text-align: left;
-font-family: 'Esteban', serif;
- 
+
+  font-size: 60px;
+  color: white;
+  margin-right: 50px;
+  margin-top: 100px;
+  line-height: 60px;
+  text-align: left;
+  font-family: 'Esteban', serif;
 }
  
 .withimg{
   width: 100px;
   margin-top: 5px;
-  height:60px;
-  
- 
-  
+  height:60px; 
 }
 
 

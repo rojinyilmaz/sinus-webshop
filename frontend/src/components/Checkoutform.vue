@@ -96,12 +96,12 @@ export default {
 <style scoped>
 
 h3{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .deliverytext{
-    text-decoration: underline;
-    margin-left: 1em;
+  text-decoration: underline;
+  margin-left: 1em;
 }
 
 label{
@@ -119,44 +119,41 @@ input[type=text] {
 
 }
 
-
 .submit{
   border-radius: 20px;
-    border: 1px solid ;
-    background-color: black;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform .1s ease-in;   
+  border: 1px solid ;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform .1s ease-in;   
 }
-
 
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
 .delivery {
-   position: relative;
-   display: inline-block;
-   right: 0;
+  position: relative;
+  display: inline-block;
+  right: 0;
   display: grid;
   grid-template-columns: 1fr;
-    grid-gap: 1px;
+  grid-gap: 1px;
   border-radius: 5px;
   background-color: #ffff;
   padding: 20px;
 }
 
-
 .payment{
   display: grid;
   position: absolute;
-    inset-inline-end: 7rem;
-    top: -3.6rem;
-    grid-gap: 18px;
+  inset-inline-end: 7rem;
+  top: -3.6rem;
+  grid-gap: 18px;
 }
 
 .switch {
@@ -209,7 +206,6 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
 
 .slider.round {
   border-radius: 34px;

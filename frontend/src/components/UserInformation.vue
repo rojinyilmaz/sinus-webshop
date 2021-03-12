@@ -20,7 +20,7 @@
     <template v-else>
       <p>You have no order history</p>
     </template>
-    <button @click="logOut">Log out</button>
+    <button @click="logOut">LOG OUT</button>
   </div>
   
 </template>
@@ -29,10 +29,10 @@
 export default {
     computed: {
         user() {
-            return this.$store.state.user
+            return this.$store.state.user;
         },
         orderHistory() {
-            return this.$store.state.orderHistory
+            return this.$store.state.orderHistory;
         }
     },
     methods: {
@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style scoped>
+
 .main {
   background-color: white;
   width: 95%;

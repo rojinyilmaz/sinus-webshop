@@ -24,30 +24,28 @@ export default {
 
 <style scoped>
 .wrapper{
-    background-color: black;
-     height: 89vh;
-    margin-left: -1%;
+  background-color: black;
+  height: 89vh;
+  margin-left: -1%;
   margin-right: -1%;
   margin-bottom: -1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .checkout:not(.logo) {
-    background-color: #ffff;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 96%;
-    height: 84vh;
-    border-radius: 3px; 
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 96%;
+  height: 84vh;
+  border-radius: 3px; 
   position: relative;
 }
-
-
 
 .logo{
   text-align: center;
@@ -58,18 +56,18 @@ export default {
 }
 
 .line1{
-    border: 2px solid black;
-    width: 90%;
-    margin-top: 1rem;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 .vl{
-      border-left: 5px solid black;
-    height: 65%;
-    position: absolute;
-    left: 60%;
-    margin-left: -3px;
-    top: 14.5rem;
+  border-left: 5px solid black;
+  height: 65%;
+  position: absolute;
+  left: 60%;
+  margin-left: -3px;
+  top: 14.5rem;
 }
 
 

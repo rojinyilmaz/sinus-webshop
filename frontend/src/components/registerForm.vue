@@ -115,21 +115,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* 
-.wrapper{
-    background-color: black;
-} */
-
-
-
 
 .register-main {
     background: white;
     border : 1px solid;
-    width: 45%;
+    width: 90%;
     border-radius: 20px;
-     
-    
     margin-left:auto;
     margin-right:auto;
     display: flex;
@@ -141,20 +132,16 @@ export default {
 .input-form {
     display: grid;
     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
-    /* grid-template-columns: 20rem 20rem; */
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
 
 input {
-    
-    
     outline: none;
     background-color: rgb(255, 255, 255);
     height: 35px;
     margin-right: 10px;
     margin-left: 3px;
     overflow: hidden;
-    
 }
 
 label {
@@ -174,7 +161,6 @@ label {
 .email {
     grid-row: 2/3;
     grid-column: 1/2;
-    
 }
 
 .label-for-password {
@@ -243,27 +229,29 @@ label {
 }
 
 .button input {
-    
-   border-radius: 20px;
-    border: 1px solid ;
-    background-color: black;
-    color: white;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid #36B52B;
+    background-color: #36B52B;
+    color: black;
     font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform .1s ease-in;
 
-&:active {
+    &:active {
       transform: scale(.9);
     }
 
     &:focus{
       outline: none;
     }
-}
 
+    &:hover{
+    background-color: black;
+    color: white;
+    border: none;
+    }
+}
 
 button.inver{
     background-color: transparent;
@@ -277,23 +265,15 @@ button.inver{
     font-size: 18px;
 }
 
-/* .alert-color{
-    border-color: rgb(228, 15, 15);
-} */
-
 ul {
     list-style: none;
     padding-left: 0px;
 }
 
 h1{
-    
     font-size: 40px;
     text-transform: uppercase;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-
-
-
 
 </style>

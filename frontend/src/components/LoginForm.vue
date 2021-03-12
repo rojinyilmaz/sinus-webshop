@@ -59,19 +59,19 @@ export default {
             const emailValidation = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
             this.errors.splice(0,1);
             if(this.email === ''){
-                this.errors.push('Enter your e-mail address')
+                this.errors.push('Enter your e-mail address');
                 return;
             } else if(!emailValidation.test(this.email)){
-                this.errors.push('Make sure your e-mail address is correct')
+                this.errors.push('Make sure your e-mail address is correct');
                 return;
             } else if(this.password === '') {
-                this.errors.push('Enter your password')
+                this.errors.push('Enter your password');
                 return;
             } else if(this.password.length < 8){
-                this.errors.push('Password length should be 8 to 15')
+                this.errors.push('Password length should be 8 to 15');
                 return;
             } else {
-                return true
+                return true;
             }
         }
     }
@@ -82,7 +82,7 @@ export default {
 
 .log-in {
     background: white;
-    width: 45%;
+    width: 90%;
     padding: 70px 60px;
     border-radius: 20px;
     border-bottom-right-radius: 0;
@@ -106,16 +106,14 @@ input{
 }
 
 .button input {
-    width: 160px;
-    border-radius: 20px;
-    background-color: black;
-    color: #fff;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid #36B52B;
+    background-color: #36B52B;
+    color: black;
     font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform .1s ease-in;
 
     &:active {
       transform: scale(.9);
@@ -123,6 +121,12 @@ input{
 
     &:focus{
       outline: none;
+    }
+
+    &:hover{
+    background-color: black;
+    color: white;
+    border: none;
     }
 }
 

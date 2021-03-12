@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
 
 a{
@@ -136,12 +136,4 @@ ul {
  
 }
 
-/*.menu a {
-  color: rgb(156, 11, 11);
-  text-decoration: underline;
-  font-size: 3rem;
-  padding: 0 2rem;
-  justify-content: center;
-}
-*/
 </style>

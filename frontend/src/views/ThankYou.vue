@@ -35,25 +35,25 @@ computed: {
 
 <style scoped>
 .wrapper{
-    background-color: black;
-    margin-left: -1%;
+  background-color: black;
+  margin-left: -1%;
   margin-right: -1%;
   margin-bottom: -1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .thankyou:not(.logo) {
-    background-color: #ffff;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 96%;
-    height: 84vh;
-    border-radius: 3px; 
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 96%;
+  height: 84vh;
+  border-radius: 3px; 
   position: relative;
 }
 
@@ -68,46 +68,45 @@ computed: {
 }
 
 .line1{
-    border: 2px solid black;
-    width: 90%;
-    margin-top: 1rem;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 
 h1{
-    text-decoration: underline;
-    margin-left: 3em;
-    font-weight: bold;
-    color:midnightblue;
+  text-decoration: underline;
+  margin-left: 3em;
+  font-weight: bold;
+  color:midnightblue;
 }
 
 p{
-    font-weight: bold;
-    font-size: 1em;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 h1, p{
-    text-align: center;
+  text-align: center;
 }
 
 .cartlist{
-display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin-inline: 3.5rem;  
 }
 
-
 .skateboard{
-    position: fixed;
-    inset-inline-end: 30%;
-    height: 38%;
-    width: 38%;
+  position: fixed;
+  inset-inline-end: 30%;
+  height: 38%;
+  width: 38%;
 }
 
 button{
- width: 23%;
+  width: 23%;
   background-color: black;
   color: white;
   font-weight: bold;
@@ -116,14 +115,14 @@ button{
   border: 1px solid;
   letter-spacing: 1px;
   border-radius: 20px;
-transition: transform .1s ease-in;   
+  transition: transform .1s ease-in;   
   cursor: pointer;
   right: 38%;
-    bottom: 5%;
-    position: absolute;
+  bottom: 5%;
+  position: absolute;
 }
 button:hover{
-background-color: #45a049;
+  background-color: #45a049;
 }
 
 </style>

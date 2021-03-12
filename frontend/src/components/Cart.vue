@@ -24,21 +24,21 @@ watch: {
 
 <style>
 .cart{
-    right: 0;
-    display: inline-block;
-    position: relative;
+  right: 0;
+  display: inline-block;
+  position: relative;
 }
 
-
 .badge{
-position: absolute;
-width: 18px;
-height: 18px;
-background-color: blue;
-border-radius: 0.5rem;
-top: -10px;
-right: 0;
-color: white;
+
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: blue;
+  border-radius: 0.5rem;
+  top: -10px;
+  right: 0;
+  color: white;
 }
 
 </style>

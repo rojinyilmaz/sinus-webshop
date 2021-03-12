@@ -34,7 +34,7 @@ export default {
   },
    methods:{
       addCart() {
-        this.$store.commit('addProductToCart', this.product)
+        this.$store.commit('addProductToCart', this.product);
       }
     },
 };
@@ -47,15 +47,14 @@ export default {
   height: 40em;
   margin: 4em;
 }
-#bImage {
-  width: 60%;
-}
+
 #bImg {
   min-width: 100%;
   min-height: 100%;
   margin: 0;
   background-color: grey;
 }
+
 #bDesc {
   width: 40%;
   background-color: white;
@@ -63,9 +62,11 @@ export default {
   align-content: center;
   padding-top: 4em;
 }
+
 #pDesc {
   padding: 0 2em 2em 2em;
 }
+
 button {
   width: 80%;
   text-decoration: none;

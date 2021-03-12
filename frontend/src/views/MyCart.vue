@@ -54,17 +54,16 @@ computed: {
 
 
 .checkout{
-    background-color: #ffff;
-    display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 96%;
-        height: 84vh;
-        border-radius: 3px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 96%;
+  height: 84vh;
+  border-radius: 3px;
 }
 
 .logo{
-  
   text-align: center;
   width: fit-content;
   margin-left: auto;
@@ -73,33 +72,30 @@ computed: {
 }
 
 .line1{
-    border: 2px solid black;
-    width: 90%;
-    margin-top: 1rem;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 .line2{
-    border: 2px solid black;
-    width: 90%;
-    margin-top: 1rem;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 .h2cart{
-    text-decoration: underline;
-    margin-left: 3.5rem;
+  text-decoration: underline;
+  margin-left: 3.5rem;
 }
 
 h3{
-   display: flex;
+  display: flex;
   justify-content: flex-end;
   margin-inline: 6rem;
   bottom: 10rem;
   text-decoration: underline;
   font-weight: bold;
-
 }
-
-
 
 .cartlist{
 display: grid;
@@ -109,12 +105,9 @@ display: grid;
   margin-inline: 3.5rem;  
 }
 
-
-
 img{
   width: 60px;
   height: 60px;
-
 }
 
 button{
@@ -128,11 +121,11 @@ button{
   letter-spacing: 1px;
   border-radius: 20px;
   text-transform: uppercase;
-      transition: transform .1s ease-in;   
+  transition: transform .1s ease-in;   
   cursor: pointer;
   right: 5.5rem;
-    bottom: 5rem;
-    position: absolute;
+  bottom: 5rem;
+  position: absolute;
 }
 
 button:hover{
